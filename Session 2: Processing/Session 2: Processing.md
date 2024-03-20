@@ -5,14 +5,18 @@ Slide deck for this session can be found [here](.) and recording can be found [h
 ## Goals
 
 
-## Homework
-
-
 
 ## Resources
 
-### Scripts
+#### DRA Wiki
 
-### Literature
+#### DRA Training
+The Digital Research Alliance of Canada [offers free online training sessions](https://alliancecan.ca/en/services/advanced-research-computing/technical-support/training-calendar) for all skill levels, to equip researchers with the skills and knowledge to perform effective computational work and use DRA HPC resources efficiently. Content covers a wide range of topics, including data analysis, parallel computing, machine learning, and version control.
+
+## Scripts
+
+## Readings
 
 
+
+## Homework
