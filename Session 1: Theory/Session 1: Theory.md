@@ -7,7 +7,7 @@ Slide deck for this session can be found [here](https://docs.google.com/presenta
 <br>
 
 ## GOALS
-Participants should able to formulate a research question that can be answered using TVB and conceptualize a basic TVB model design.
+Participants will able to formulate a research question that can be answered using TVB and conceptualize a basic TVB model design.
 
 #### Concepts covered: 
 - Basic theoretical foundations of TVB
