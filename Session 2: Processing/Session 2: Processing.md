@@ -1,5 +1,7 @@
 # Session 2 - Imaging inputs and post-processing considerations for brain network modelling
 
+<br>
+
 Slide deck for this session can be found [here](.) and recording can be found [here](.).
 
 <br>
@@ -48,6 +50,8 @@ The Digital Research Alliance of Canada offers free online training sessions for
 ## SCRIPTS
 
 
+
+<br>
 
 ## HOMEWORK
 
