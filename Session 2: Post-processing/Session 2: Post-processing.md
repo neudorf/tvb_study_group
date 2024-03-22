@@ -32,6 +32,7 @@ Participants will able to make appropriate decisions about post-processing of st
 ### Digital Research Alliance (DRA)
 The Digital Research Alliance (formerly known as Compute Canada) hosts free high-performance computing resources. For reproducibility and to save time on setting up environments, our tutorials should be run on Digital Research Alliance's [Cedar cluster](https://docs.alliancecan.ca/wiki/Cedar). Instructions for getting started with DRA are detailed in [Homework](#HOMEWORK) below.
 
+<br>
 
 #### [CCDB](https://ccdb.alliancecan.ca/)
 The Compute Canada Database is essential for setting up and configuring your Digital Research Alliance of Canada (DRA) account. You can also view and edit account, group, usage, and allocation information. You will need to create a DRA account **as soon as possible** in order to follow some of the tutorials in later sessions.
