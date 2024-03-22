@@ -63,7 +63,7 @@ The Digital Research Alliance of Canada offers free online training sessions for
   - Checking graph metrics using BCT or other tools (give some links)
   - Apply thresholding to sample
 
-
+<br>
 
 ## READINGS
 
