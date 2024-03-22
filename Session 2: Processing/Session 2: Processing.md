@@ -7,7 +7,9 @@ Participants are able to make appropriate decisions about post-processing of str
 - Create or check appropriateness of inputs
 - Understand formatting requirements for inputs
 
-#### Concepts covered: 
+<br>
+
+### Concepts covered: 
 - dMRI cleaning & tractography primer
   - Overview of dMRI processing resources, tutorials, and use cases (FSL, MRtrix, TVB-UKBB)
 - Pitfalls for dMRI tractography (probabilistic vs deterministic)
