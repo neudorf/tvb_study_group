@@ -32,7 +32,7 @@ Participants will able to make appropriate decisions about post-processing of st
 ### Digital Research Alliance (DRA)
 The Digital Research Alliance (formerly known as Compute Canada) hosts free high-performance computing resources. For reproducibility and to save time on setting up environments, our tutorials should be run on Digital Research Alliance's [Cedar cluster](https://docs.alliancecan.ca/wiki/Cedar). Instructions for getting started with DRA are detailed in [Homework](#HOMEWORK) below.
 
-<br>
+
 
 #### [CCDB](https://ccdb.alliancecan.ca/)
 The Compute Canada Database is essential for setting up and configuring your Digital Research Alliance of Canada (DRA) account. You can also view and edit account, group, usage, and allocation information. You will need to create a DRA account **as soon as possible** in order to follow some of the tutorials in later sessions.
@@ -62,8 +62,9 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 ## HOMEWORK
 
 #### Required:
+- Sign up with DRA by [creating a CCDB account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) by Wed March 27. Make sure that your PI is registered with CCDB and that you provide your PI's unique identifier in your registration (e.g. abc-123-01). Your PI will have to confirm your application once you've submitted it.
+- Once complete, you should be able to access Cedar through the command-line with `ssh username@cedar.computecanada.ca`. Your username/password will be your CCDB username/password.
 - Install TVB environment ( instructions emailed & on Slack on Friday Mar 22)
-  - Wed March 27: establish a compute canada account
 - Follow Justin’s github repo to set up environment
 - Jupyter lab setup and interactive session
 
