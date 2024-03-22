@@ -30,7 +30,7 @@ Participants will able to make appropriate decisions about post-processing of st
 ## RESOURCES
 
 ### Digital Research Alliance (DRA)
-The Digital Research Alliance (formerly known as Compute Canada) hosts free high-performance computing resources. For reproducibility and to save time on setting up environments, our tutorials should be run on Digital Research Alliance's [Cedar cluster](https://docs.alliancecan.ca/wiki/Cedar). Instructions for 
+The Digital Research Alliance (formerly known as Compute Canada) hosts free high-performance computing resources. For reproducibility and to save time on setting up environments, our tutorials should be run on Digital Research Alliance's [Cedar cluster](https://docs.alliancecan.ca/wiki/Cedar). Instructions for getting started with DRA are detailed in [Homework](#HOMEWORK) below.
 
 
 #### [CCDB](https://ccdb.alliancecan.ca/)
