@@ -61,6 +61,10 @@ tvb-data contains "various demonstration datasets for use with The Virtual Brain
 
 `tvb-data/tvb_data/connectivity/connectivity_76/` contains sample inputs required for creating a TVB model using a 76 region connectome.  
 
+
+
+
+
 #### [TVB input specifications](https://docs.thevirtualbrain.org/manuals/UserGuide/DataExchange.html#import-connectivity-from-zip)
 The TVB input specifications detail the requirements regarding filenaming, file contents, and file structure for each input file type (e.g. weights, tract lengths, etc).
 
