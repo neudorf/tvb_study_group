@@ -2,7 +2,7 @@
 
 This is the repository for The Virtual Brain (TVB) Study Group. Resources (documentation, notebooks, tutorials) for each session can be found within each session's folders above or by clicking the links below.
 
-If you're looking for our TVB modelling workflow, see the Notebooks and Homework within each Session. A Quick-start Guide featuring this workflow in a single document will also be released shortly!
+If you're looking for our TVB modelling workflow, see the Notebooks and Homework for each session. A Quick-start Guide featuring our entire TVB workflow in a single document will also be released shortly!
 
 <br>
 
