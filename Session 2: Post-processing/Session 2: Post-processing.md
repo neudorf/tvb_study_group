@@ -64,7 +64,7 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 2. Once complete, you should be able to access Cedar through the command-line with `ssh username@cedar.computecanada.ca`. Your username/password will be your CCDB username/password. See [SSH details](https://docs.alliancecan.ca/wiki/SSH) for other options if this command isn't working on your computer.
 3. Familiarize yourself with the DRA and Cedar infrastructure, especially pertaining to [File Storage](https://docs.alliancecan.ca/wiki/Storage_and_file_management).
 4. Install the TVB environment on your Cedar account, following [these instructions](.).
-5. Setup Jupyter on your Cedar account using [Jupyter Notebook](https://docs.alliancecan.ca/wiki/JupyterNotebook#Installing_Jupyter_Notebook) (more challenging) or [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub) (less challenging).
+5. Setup Jupyter on your Cedar account using [Jupyter Notebook](https://docs.alliancecan.ca/wiki/JupyterNotebook#Installing_Jupyter_Notebook) (more challenging) or [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub) (simpler).
 
 <br>
 
