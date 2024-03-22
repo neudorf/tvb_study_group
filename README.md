@@ -4,7 +4,7 @@
 ## [Session 1: Theory](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%201%3A%20Theory/Session%201%3A%20Theory.md)
 	
 	
-## [Session 2: Post-processing](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202%3A%20Post-processing/Session%202%3A%20Processing.md)
+## [Session 2: Post-processing](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202%3A%20Post-processing/Session%202%3A%20Post-processing.md)
 	
 	
 ## [Session 3: Simulation](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%203%3A%20Simulation/Session%203%3A%20Simulation.md)
