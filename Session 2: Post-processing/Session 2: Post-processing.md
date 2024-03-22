@@ -68,9 +68,9 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 
 #### Optional:
 - Set up a jupyter notebook to explore structural connectome and functional features 
-  - Plotting
-  - Checking graph metrics using BCT or other tools (give some links)
-  - Apply thresholding to sample
+  - Plot a structural connectivity (SC) matrix for your data
+  - Check graph metrics of a SC matrix using BCT or other tools
+  - Apply thresholding to a sample
 
 <br>
 
