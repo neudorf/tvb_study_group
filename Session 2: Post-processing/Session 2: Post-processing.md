@@ -63,9 +63,10 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 
 #### Required:
 1. Sign up with DRA by creating a [CCDB account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) by Wed March 27. Make sure that your PI is registered with CCDB and that you provide your PI's unique identifier in your registration (e.g. abc-123-01). Your PI will have to confirm your application once you've submitted it.
-2. Once complete, you should be able to access Cedar through the command-line with `ssh username@cedar.computecanada.ca`. Your username/password will be your CCDB username/password.
-3. Install TVB environment
-4. Jupyter lab setup and interactive session
+2. Once complete, you should be able to access Cedar through the command-line with `ssh username@cedar.computecanada.ca`. Your username/password will be your CCDB username/password. See [SSH details](https://docs.alliancecan.ca/wiki/SSH).
+3. Familiarize yourself with the DRA and Cedar infrastructure, especially pertaining to [File Storage](https://docs.alliancecan.ca/wiki/Storage_and_file_management).
+4. Install TVB environment
+5. Jupyter lab setup and interactive session
 
 #### Optional:
 - Set up a jupyter notebook to explore structural connectome and functional features 
