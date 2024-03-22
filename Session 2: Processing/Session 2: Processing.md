@@ -29,7 +29,7 @@ Participants are able to make appropriate decisions about post-processing of str
 
 ## RESOURCES
 
-#### CCDB
+#### [CCDB](https://ccdb.alliancecan.ca/)
 The [Compute Canada Database](https://ccdb.alliancecan.ca/) is essential for setting up and configuring your Digital Research Alliance of Canada (DRA) account. You can also view and edit account, group, usage, and allocation information. You will need to create a DRA account **as soon as possible** in order to follow some of the tutorials in later sessions.
 
 
