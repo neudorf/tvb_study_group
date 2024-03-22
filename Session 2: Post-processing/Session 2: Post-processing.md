@@ -51,9 +51,7 @@ The Digital Research Alliance of Canada offers free online training sessions for
 #### [DRA Status Page](https://status.alliancecan.ca/)
 If you're having troubles with any of the DRA resources, it's always a good idea to check the Status Page to see if there are any reported outages.
 
-<br>
 
-## NOTEBOOKS
 
 
 
