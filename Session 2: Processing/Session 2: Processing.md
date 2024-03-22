@@ -48,7 +48,22 @@ The Digital Research Alliance of Canada offers free online training sessions for
 ## SCRIPTS
 
 
-## READINGS
-
 
 ## HOMEWORK
+
+#### Required:
+- Install TVB environment ( instructions emailed & on Slack on Friday Mar 22)
+  - Wed March 27: establish a compute canada account
+- Follow Justin’s github repo to set up environment
+- Jupyter lab setup and interactive session
+
+#### Optional:
+-Set up a jupyter notebook to explore structural connectome and functional features 
+  - Plotting
+  - Checking graph metrics using BCT or other tools (give some links)
+  - Apply thresholding to sample
+
+
+
+## READINGS
+
