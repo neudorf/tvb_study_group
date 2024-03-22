@@ -2,7 +2,7 @@
 
 Slide deck for this session can be found [here](.) and recording can be found [here](.).
 
-## Goals:
+## GOALS
 Participants are able to make appropriate decisions about post-processing of structural connectomes 
 - Create or check appropriateness of inputs
 - Understand formatting requirements for inputs
@@ -27,7 +27,7 @@ Participants are able to make appropriate decisions about post-processing of str
 
 <br> 
 
-## Resources
+## RESOURCES
 
 #### CCDB
 Compute Canada Database, the main site for setting up and configuring your Digiral Research Alliance of Canada account, can be found [here](https://ccdb.alliancecan.ca/). You can view and edit account, group, usage, and allocation information.
@@ -45,10 +45,10 @@ The Digital Research Alliance of Canada [offers free online training sessions](h
 <br>
 <br>
 
-## Scripts
-
-## Readings
+## SCRIPTS
 
 
+## READINGS
 
-## Homework
+
+## HOMEWORK
