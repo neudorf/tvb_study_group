@@ -2,6 +2,8 @@
 
 Slide deck for this session can be found [here](.) and recording can be found [here](.).
 
+<br>
+
 ## GOALS
 Participants are able to make appropriate decisions about post-processing of structural connectomes 
 - Create or check appropriateness of inputs
