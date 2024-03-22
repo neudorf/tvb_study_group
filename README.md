@@ -1,6 +1,7 @@
 # The Virtual Brain (TVB) Study Group
 
 This is the repository for The Virtual Brain Study Group. Resources (documentation, notebooks, tutorials) for each session can be found within each session's folders above or by clicking the links below.
+
 <br>
 
 
