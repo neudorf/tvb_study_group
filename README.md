@@ -17,7 +17,7 @@ _Some of the foundational theory - an introduction to the what, why, and how of 
 
 _What needs to be done with our neuroimaging data before we can start creating our TVB models?_
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Slides](https://docs.google.com/presentation/d/1D30noTEmEf7WG79DQvx8s5TIpO1v7XMXegMtXps2ouo/edit?usp=drive_link) - Recording - [Resources](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202%3A%20Post-processing/Session%202%3A%20Post-processing.md) - [Homework](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202:%20Post-processing/Session%202:%20Post-processing.md#homework) - Homework
+&nbsp;&nbsp;&nbsp;&nbsp;[Slides](https://docs.google.com/presentation/d/1D30noTEmEf7WG79DQvx8s5TIpO1v7XMXegMtXps2ouo/edit?usp=drive_link) - Recording - [Resources](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202%3A%20Post-processing/Session%202%3A%20Post-processing.md) - [Homework](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202:%20Post-processing/Session%202:%20Post-processing.md#homework)
 
 <br>
 
