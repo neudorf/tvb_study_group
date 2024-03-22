@@ -58,7 +58,7 @@ The Digital Research Alliance of Canada offers free online training sessions for
 - Jupyter lab setup and interactive session
 
 #### Optional:
--Set up a jupyter notebook to explore structural connectome and functional features 
+- Set up a jupyter notebook to explore structural connectome and functional features 
   - Plotting
   - Checking graph metrics using BCT or other tools (give some links)
   - Apply thresholding to sample
