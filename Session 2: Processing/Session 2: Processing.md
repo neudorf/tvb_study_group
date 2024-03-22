@@ -28,7 +28,7 @@ Participants are able to make appropriate decisions about post-processing of str
 ## RESOURCES
 
 #### CCDB
-Compute Canada Database, the main site for setting up and configuring your Digiral Research Alliance of Canada account, can be found [here](https://ccdb.alliancecan.ca/). You can view and edit account, group, usage, and allocation information.
+The [Compute Canada Database](https://ccdb.alliancecan.ca/) is essential for setting up and configuring your Digital Research Alliance of Canada account. You can view and edit account, group, usage, and allocation information.
 
 <br>
 
