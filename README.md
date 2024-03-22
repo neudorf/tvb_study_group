@@ -3,8 +3,8 @@
 This is the repository for The Virtual Brain Study Group. Resources (documentation, notebooks, tutorials) for each session can be found within each session's folders above or by clicking the links below.
 
 
-### [Session 1: Theory](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%201%3A%20Theory/Session%201%3A%20Theory.md)
-&nbsp;&nbsp;&nbsp;&nbsp;[Slides](https://docs.google.com/presentation/d/1m162HYdZUSFA2WCnUa9mi3SdtjetL12cw4RU8mI_GLk/edit?usp=drive_link) - [Recording](https://drive.google.com/file/d/1q-3oktGHEHHoSJy5DylOswcchL2CuJ4h/view?usp=sharing) - Resources
+### Session 1: Theory
+&nbsp;&nbsp;&nbsp;&nbsp;[Slides](https://docs.google.com/presentation/d/1m162HYdZUSFA2WCnUa9mi3SdtjetL12cw4RU8mI_GLk/edit?usp=drive_link) - [Recording](https://drive.google.com/file/d/1q-3oktGHEHHoSJy5DylOswcchL2CuJ4h/view?usp=sharing) - [Resources](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%201%3A%20Theory/Session%201%3A%20Theory.md)
 	
 ### [Session 2: Post-processing](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%202%3A%20Post-processing/Session%202%3A%20Post-processing.md)
 &nbsp;&nbsp;&nbsp;&nbsp;[Slides](https://docs.google.com/presentation/d/1D30noTEmEf7WG79DQvx8s5TIpO1v7XMXegMtXps2ouo/edit?usp=drive_link) - Recording - Resources
