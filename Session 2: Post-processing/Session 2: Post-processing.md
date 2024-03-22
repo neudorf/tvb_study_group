@@ -2,7 +2,7 @@
 
 <br>
 
-Slide deck for this session can be found [here](.) and recording can be found [here](.).
+Slide deck for this session can be found [here](.) and the recording can be found [here](.).
 
 <br>
 
