@@ -9,7 +9,7 @@ Participants are able to make appropriate decisions about post-processing of str
 
 ### Concepts covered: 
 - dMRI cleaning & tractography primer
-- Overview of dMRI processing resources, tutorials, and use cases (FSL, MRtrix, TVB-UKBB)
+-- Overview of dMRI processing resources, tutorials, and use cases (FSL, MRtrix, TVB-UKBB)
 - Pitfalls for dMRI tractography (probabilistic vs deterministic)
 - Graph theory fundamentals
 - Post-processing choices (normalization within subject (streamlines vs probabilities), types of thresholding, normalization across the sample)
