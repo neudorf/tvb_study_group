@@ -7,7 +7,7 @@ Participants are able to make appropriate decisions about post-processing of str
 - Create or check appropriateness of inputs
 - Understand formatting requirements for inputs
 
-### Concepts covered: 
+#### Concepts covered: 
 - dMRI cleaning & tractography primer
   - Overview of dMRI processing resources, tutorials, and use cases (FSL, MRtrix, TVB-UKBB)
 - Pitfalls for dMRI tractography (probabilistic vs deterministic)
@@ -30,17 +30,17 @@ Participants are able to make appropriate decisions about post-processing of str
 #### CCDB
 The [Compute Canada Database](https://ccdb.alliancecan.ca/) is essential for setting up and configuring your Digital Research Alliance of Canada (DRA) account. You can also view and edit account, group, usage, and allocation information. You will need to create a DRA account **as soon as possible** in order to follow some of the tutorials in later sessions.
 
-<br>
+
 
 #### DRA Wiki
 The Digital Research Alliance of Canada has provided a [detailed technical documentation wiki](https://docs.alliancecan.ca/wiki/Technical_documentation) that should be the "primary source for users with questions on equipment and services of the Alliance".
 
-<br>
+
 
 #### DRA Training
 The Digital Research Alliance of Canada [offers free online training sessions](https://alliancecan.ca/en/services/advanced-research-computing/technical-support/training-calendar) for all skill levels, to equip researchers with the skills and knowledge to perform effective computational work and use DRA HPC resources efficiently. Content covers a wide range of topics, including data analysis, parallel computing, machine learning, and version control.
 
-<br>
+
 <br>
 
 ## SCRIPTS
