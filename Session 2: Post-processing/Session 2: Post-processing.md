@@ -76,5 +76,3 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 
 <br>
 
-## READINGS
-
