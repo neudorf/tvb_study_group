@@ -31,6 +31,10 @@ Participants are able to make appropriate decisions about post-processing of str
 
 ## RESOURCES
 
+### Digital Research Alliance (DRA)
+The Digital Research Alliance (formerly known as Compute Canada) hosts free high-performance computing resources. For reproducibility and to save time on setting up environments, our tutorials should be run on Digital Research Alliance's [Cedar cluster](https://docs.alliancecan.ca/wiki/Cedar). Instructions for 
+
+
 #### [CCDB](https://ccdb.alliancecan.ca/)
 The Compute Canada Database is essential for setting up and configuring your Digital Research Alliance of Canada (DRA) account. You can also view and edit account, group, usage, and allocation information. You will need to create a DRA account **as soon as possible** in order to follow some of the tutorials in later sessions.
 
@@ -45,9 +49,12 @@ The Digital Research Alliance of Canada has provided a detailed technical docume
 The Digital Research Alliance of Canada offers free online training sessions for all skill levels, to equip researchers with the skills and knowledge to perform effective computational work and use DRA HPC resources efficiently. Content covers a wide range of topics, including data analysis, parallel computing, machine learning, and version control.
 
 
+#### [DRA Status Page](https://status.alliancecan.ca/)
+If you're having troubles with any of the DRA resources, it's always a good idea to check the Status Page to see if there are any reported outages.
+
 <br>
 
-## SCRIPTS
+## NOTEBOOKS
 
 
 
