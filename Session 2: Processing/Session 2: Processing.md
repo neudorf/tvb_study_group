@@ -2,7 +2,7 @@
 
 Slide deck for this session can be found [here](.) and recording can be found [here](.).
 
-### Goals:
+## Goals:
 Participants are able to make appropriate decisions about post-processing of structural connectomes 
 - Create or check appropriateness of inputs
 - Understand formatting requirements for inputs
@@ -23,6 +23,7 @@ Participants are able to make appropriate decisions about post-processing of str
 - Required TVB inputs for each simulation output modality
   - File-naming, file content structure
 
+<br> 
 
 ## Resources
 
