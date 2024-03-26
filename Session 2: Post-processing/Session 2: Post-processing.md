@@ -59,6 +59,7 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 #### [TVB input specifications](https://docs.thevirtualbrain.org/manuals/UserGuide/DataExchange.html#import-connectivity-from-zip)
 The TVB input specifications detail the requirements regarding filenaming, file contents, and file structure for each input file type (e.g. weights, tract lengths, etc).
 
+<br>
 
 ### Sample Datasets
 
