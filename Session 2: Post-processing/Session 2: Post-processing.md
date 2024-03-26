@@ -67,6 +67,12 @@ The TVB input specifications detail the requirements regarding filenaming, file 
 We'll be using connectomes generated from this open dataset to generate some of our examples. A link will be shared shortly!
 
 
+
+#### [tvb-data Sample Data](https://zenodo.org/records/10128131)
+tvb-data contains "various demonstration datasets for use with The Virtual Brain project". We will not be using this dataset in our notebooks and examples. Download link [here](https://zenodo.org/records/10128131/files/tvb_data.zip?download=1). 
+
+
+
 <br>
 
 ## HOMEWORK
