@@ -56,17 +56,14 @@ If you're having troubles with any of the DRA resources, it's always a good idea
 ### The Virtual Brain (TVB)
 
 
-#### [tvb-data Sample Data](https://zenodo.org/records/10128131)
-tvb-data contains "various demonstration datasets for use with The Virtual Brain project". Download link [here](https://zenodo.org/records/10128131/files/tvb_data.zip?download=1). 
-
-`tvb-data/tvb_data/connectivity/connectivity_76/` contains sample inputs required for creating a TVB model using a 76 region connectome.  
-
-
-
-
-
 #### [TVB input specifications](https://docs.thevirtualbrain.org/manuals/UserGuide/DataExchange.html#import-connectivity-from-zip)
 The TVB input specifications detail the requirements regarding filenaming, file contents, and file structure for each input file type (e.g. weights, tract lengths, etc).
+
+
+### Sample Datasets
+
+#### [Amsterdam Dataset]()
+We'll be using connectomes generated from this open dataset to generate some of our examples. A link will be shared shortly!
 
 
 <br>
