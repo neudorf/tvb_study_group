@@ -78,7 +78,7 @@ The TVB input specifications detail the requirements regarding filenaming, file 
 2. Once complete, you should be able to access Cedar through the command-line with `ssh username@cedar.computecanada.ca`. Your username/password will be your CCDB username/password. See [SSH details](https://docs.alliancecan.ca/wiki/SSH) for other options if this command isn't working on your computer.
 3. Familiarize yourself with the DRA and Cedar infrastructure, especially pertaining to [File Storage](https://docs.alliancecan.ca/wiki/Storage_and_file_management).
 4. Install the TVB environment on your Cedar account, following the Initial Setup installation instructions on [the tvb_demo repository](https://github.com/McIntosh-Lab/tvb_demo/tree/main#initial-setup-on-compute-canada) by **the week of April 1**.
-5. Get started with Jupyter on your Cedar account using [JupyterHub](https://jupyterhub.cedar.computecanada.ca/) with documentation [here](https://docs.alliancecan.ca/wiki/JupyterHub) (simpler). Setup the TVB environment for JupyterLab with instructions also on [our tvb_demo repository](https://github.com/McIntosh-Lab/tvb_demo/tree/main#initial-setup-on-compute-canada).
+5. Get started with Jupyter on your Cedar account using [JupyterHub](https://jupyterhub.cedar.computecanada.ca/) with documentation [here](https://docs.alliancecan.ca/wiki/JupyterHub) (simpler). Setup the TVB environment for JupyterLab with instructions also on [our tvb_demo repository](https://github.com/McIntosh-Lab/tvb_demo/tree/main#initial-setup-on-compute-canada) (step 14).
 
 <br>
 
