@@ -24,7 +24,7 @@ _What needs to be done with our neuroimaging data before we can start creating o
 <br>
 
 ## Session 3: Simulation
-&nbsp;&nbsp;&nbsp;&nbsp;Slides - Recording - [Resources](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%203%3A%20Simulation/Session%203%3A%20Simulation.md) - Notebooks - Homework
+&nbsp;&nbsp;&nbsp;&nbsp;Slides - Recording - [Resources](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%203%3A%20Simulation/Session%203%3A%20Simulation.md) - [Notebooks](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session%203%3A%20Simulation/Session3_Single_Simulation.ipynb) - Homework
 
 <br>
 
