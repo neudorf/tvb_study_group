@@ -71,7 +71,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     time_taken = end_time - start_time
 
     #save FCD_file
-    FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise)
+    FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
     np.save(FCD_file, FCD)
 
     return([FCD_VAR_OV_vect, time_taken])
