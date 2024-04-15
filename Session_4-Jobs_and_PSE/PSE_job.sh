@@ -1,11 +1,21 @@
 #!/bin/bash
-#SBATCH --account=YOUR_ALLOCATION_HERE(e.g. def-rmcintos)
-#SBATCH --mail-user=YOUR_EMAIL_HERE(e.g. hello@gmail.com)
+#SBATCH --account=def-rmcintos
+#SBATCH --mail-user=jwa415@sfu.ca
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=8000MB
 #SBATCH --time=0-1:00
 
 # This script submits one or more simulations in a single job for PSE
+
+### START MODIFYING HERE
+### ====================================
+
+# Location of your submission script directory
+SUBMISSION_SCRIPT_DIR='/home/jwangbay/scratch/TVB_brown_bag/tvb_study_group/Session_4-Jobs_and_PSE'
+
+### STOP MODIFYING HERE
+### ====================================
+
 
 # Parameters from arguments
 param_file=$1
@@ -19,6 +29,12 @@ FCD_file_pattern=$7
 # Calculate the starting and ending line based on the SLURM_ARRAY_TASK_ID
 start_line=$(((SLURM_ARRAY_TASK_ID - 1) * num_sims_per_job + 1))
 end_line=$((start_line + num_sims_per_job - 1))
+
+
+
+# Load in env
+module load scipy-stack
+. ~/tvb/virtual_aging_brain/env/bin/activate
 
 # Read the parameters for the current job from start_line to end_line
 sed -n "${start_line},${end_line}p" $param_file | while IFS=' ' read -r noise G dt sim_len; do

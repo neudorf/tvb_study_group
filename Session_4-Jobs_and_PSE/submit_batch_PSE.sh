@@ -6,10 +6,10 @@
 ### ====================================
 
 # Location of your submission script directory
-export SUBMISSION_SCRIPT_DIR="/path/to/scripts"
+SUBMISSION_SCRIPT_DIR='/home/jwangbay/scratch/TVB_brown_bag/tvb_study_group/Session_4-Jobs_and_PSE'
 
 # List of subjects
-sublist="${SUBMISSION_SCRIPT_DIR}/re-run.tsv"
+sublist="${SUBMISSION_SCRIPT_DIR}/subs.tsv"
 
 # Path to a subject's weights matrix txt file - the {subject} portion will be replaced dynamically in the python script
 weights_file_pattern="${SUBMISSION_SCRIPT_DIR}/subs/{subject}/weights.txt"
@@ -74,7 +74,7 @@ done
 
 # Job submission loop
 while IFS= read -r subject; do
-
+  echo $subject
   #make required directories
   mkdir -p "${FCD_dir}/${subject}"
   mkdir -p "${log_dir}/${subject}"
@@ -83,7 +83,7 @@ while IFS= read -r subject; do
   num_jobs=$(( (total_lines + num_sims_per_job - 1) / num_sims_per_job ))  # Calculate the number of jobs needed
 
   sbatch -J "param_search_${subject}" --array=1-$num_jobs \
-    -o "${log_dir}/${subject}_job_%a.out" \
+    -o "${log_dir}/${subject}/${subject}_job_%a.out" \
     ${SUBMISSION_SCRIPT_DIR}/PSE_job.sh $param_file $subject $num_sims_per_job $time_per_sim $weights_file_pattern $results_file_pattern $FCD_file_pattern 
 
 done < $sublist
