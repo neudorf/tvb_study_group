@@ -25,14 +25,14 @@ def get_connectivity(scaling_factor,weights_file):
         return conn
 
 
-def process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern):
+def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern):
     start_time = time.time()
 
     weights_file=weights_file_pattern.format(subject=subject)
     
 
     dt      = dt
-    nsigma  = noise
+    nsigma  = my_noise
     G       = G
     sim_len = sim_len
     #30e3 produced 300000 ms, or 300s or 5 min. we get 148 bold timepoints if we have decimate 2000 and remove first two timepoints
@@ -71,7 +71,7 @@ def process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_p
     time_taken = end_time - start_time
 
     #save FCD_file
-    FCD_file=FCD_file_pattern.format(subject=subject)
+    FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise)
     np.save(FCD_file, FCD)
 
     return([FCD_VAR_OV_vect, time_taken])
