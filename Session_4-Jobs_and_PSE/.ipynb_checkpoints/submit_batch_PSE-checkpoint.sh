@@ -6,7 +6,7 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/home/jwangbay/scratch/TVB_brown_bag/tvb_study_group/Session_4-Jobs_and_PSE'
+SUBMISSION_SCRIPT_DIR='/path/to/Session_4-Jobs_and_PSE'
 
 # List of subjects
 sublist="${SUBMISSION_SCRIPT_DIR}/subs.tsv"
