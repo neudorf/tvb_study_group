@@ -42,7 +42,7 @@ def get_connectivity(scaling_factor,weights_file):
         return conn
 
 
-def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern,empFUNC_dir):
+def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern,empFUNC_dir,sim_file_pattern):
     start_time = time.time()
 
     weights_file=weights_file_pattern.format(subject=subject)
@@ -73,6 +73,12 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     runner = NbMPRBackend()
     (tavg_t, tavg_d), = runner.run_sim(sim, simulation_length=sim_len)
     tavg_t *= 10
+
+    sim_file=sim_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
+    os.makedirs(os.path.dirname(sim_file), exist_ok=True)
+    
+    np.savetxt(sim_file + 'tavg_t.txt', tavg_t)
+    np.save(sim_file + 'tavg_d.npy', tavg_d)
         
     bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000,TE=0.02763)
     print('tavg_to_bold step')
@@ -80,7 +86,12 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     # cut the initial transient (16s)
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
+
+    np.savetxt(sim_file + 'bold_t.txt', bold_t)
+    np.save(sim_file + 'bold_d.npy', bold_d)
+    
     FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=20)
+    np.save(sim_file + 'FCD.npy', FCD)
     FCD_VAR_OV_vect= np.var(np.triu(FCD, k=20))
     print('simFCDvar step')
     
@@ -93,6 +104,8 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     #FC correlation
     
     simFC = compute_simFC(bold_d)
+    np.save(sim_file + 'FC.npy', simFC)
+    
     print('compute_simFC step')
     FC_corr = np.corrcoef(np.triu(empFC).flatten(), np.triu(simFC).flatten())[0, 1]
     print('fc corr step:',FC_corr)
@@ -108,6 +121,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
 
     #save FCD_file
     FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
+    os.makedirs(os.path.dirname(FCD_file), exist_ok=True)
     np.save(FCD_file, FCD)
 
     return([FCD_VAR_OV_vect, FCD_KS, FC_corr, FCDvar_diff, time_taken])
