@@ -29,6 +29,9 @@ FCD_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_FCD.txt"
 # Logging directory for saving any printouts from the jobs (e.g. errors)
 log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
 
+# Location of empirical functional feature files (FC, FCD, FCDvar) 
+empFUNC_dir="/path/to/empFUNC/saves"
+
 # Parameter ranges
 G_start=1.65
 G_end=2.05
@@ -84,6 +87,6 @@ while IFS= read -r subject; do
 
   sbatch -J "param_search_${subject}" --array=1-$num_jobs \
     -o "${log_dir}/${subject}/${subject}_job_%a.out" \
-    ${SUBMISSION_SCRIPT_DIR}/PSE_job.sh $param_file $subject $num_sims_per_job $time_per_sim $weights_file_pattern $results_file_pattern $FCD_file_pattern 
+    ${SUBMISSION_SCRIPT_DIR}/PSE_job.sh $param_file $subject $num_sims_per_job $time_per_sim $weights_file_pattern $results_file_pattern $FCD_file_pattern $empFUNC_dir
 
 done < $sublist
