@@ -35,7 +35,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     nsigma  = my_noise
     G       = G
     sim_len = sim_len
-    #30e3 produced 300000 ms, or 300s or 5 min. we get 148 bold timepoints if we have decimate 2000 and remove first two timepoints
+    #30e3 produced 300000 ms, or 300s or 5 min. we get 142 bold timepoints if we have decimate 2000 and remove first eight timepoints
 
     sim = simulator.Simulator(
         connectivity = get_connectivity(1,weights_file),
