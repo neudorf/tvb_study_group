@@ -35,7 +35,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     nsigma  = my_noise
     G       = G
     sim_len = sim_len
-    #30e3 produced 300000 ms, or 300s or 5 min. we get 148 bold timepoints if we have decimate 2000 and remove first two timepoints
+    #30e3 produced 300000 ms, or 300s or 5 min. we get 142 bold timepoints if we have decimate 2000 and remove first eight timepoints
 
     sim = simulator.Simulator(
         connectivity = get_connectivity(1,weights_file),
@@ -57,14 +57,14 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     (tavg_t, tavg_d), = runner.run_sim(sim, simulation_length=sim_len)
     tavg_t *= 10
         
-    bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000)
+    bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000,TE=0.02763)
     print('tavg_to_bold step')
 
     # cut the initial transient (16s)
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
-    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5)
-    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=5))
+    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=20)
+    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=20))
 
     # Calculate time taken
     end_time = time.time()
