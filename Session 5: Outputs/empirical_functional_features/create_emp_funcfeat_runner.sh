@@ -16,5 +16,5 @@ fi
 
 # Iterate through each line in the file
 while read -r sub; do
-    sbatch ./sbatch_create_emp_funcfeat.sh "$sub"
+    sbatch ./create_emp_funcfeat_job.sh "$sub"
 done < "$sublist_file"
