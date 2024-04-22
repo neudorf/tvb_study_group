@@ -49,5 +49,5 @@ num_jobs=$(( (total_lines + num_sims_per_job - 1) / num_sims_per_job ))  # Calcu
 
 sbatch -J "optimal_parameters_rerun" --array=1-$num_jobs \
   -o "${log_dir}/optimal_parameters_rerun_job_%a.out" \
-  ${SUBMISSION_SCRIPT_DIR}/PSE_job.sh $PARAM_FILE $num_sims_per_job $time_per_sim $weights_file_pattern $results_file_pattern $FCD_file_pattern $empFUNC_dir $dt $sim_len
+  ${SUBMISSION_SCRIPT_DIR}/optimal_sim_job.sh $PARAM_FILE $num_sims_per_job $time_per_sim $weights_file_pattern $results_file_pattern $FCD_file_pattern $empFUNC_dir $dt $sim_len
 
