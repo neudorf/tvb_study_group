@@ -47,11 +47,11 @@ def handle_exception(e, subject, noise, G, dt, sim_len, time_per_sim, job_ID, jo
     write_to_file(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern, "Error")
 
 def write_to_file(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern, status, result=None):
-    result = result or ["nan"] * 2  # Assume 2 outputs are expected from montbrio_simulation
+    result = result or ["nan"] * 5  # Assume 5 outputs are expected from montbrio_simulation
     status_code = {"Success": 1, "Timeout": 2, "No Result": 3, "Error": 4}.get(status, 0)
     with open(results_file_pattern.format(subject=subject), 'a') as f:
         fcntl.flock(f, fcntl.LOCK_EX)
-        f.write(f"{subject}\t{noise}\t{G}\t{dt}\t{sim_len}\t{time_per_sim}\t{job_ID}\t{job_array_num}\t{result[0]}\t{result[1]}\t{status_code}\n")
+        f.write(f"{subject}\t{noise}\t{G}\t{dt}\t{sim_len}\t{time_per_sim}\t{job_ID}\t{job_array_num}\t{result[0]}\t{result[1]}\t{result[2]}\t{result[3]}\t{result[4]}\t{status_code}\n")
         fcntl.flock(f, fcntl.LOCK_UN)
 
 
