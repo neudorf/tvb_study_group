@@ -21,8 +21,8 @@ We must run a fresh parameter space exploration (PSE) since previous sessions' P
 
 *Ensure that key variables like timeseries length and FCD window sizes match between empirical and simulated functional data.*
 
-## Picking our optimal parameter combinations
+## Picking optimal parameter combinations
 Depending on which metric(s) we want to optimize with, we pick our optimal parameter combinations. We can generate [heatmaps](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session_5-Identifying_and_evaluating_optimal_simulations/3_visualize_and_assess_PSE/heatmap.py) and [files containing all subjects' optimal parameter combinations](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session_5-Identifying_and_evaluating_optimal_simulations/3_visualize_and_assess_PSE/optimal_parameters_getter.py) for each fitting metric.
 
-## Rerunning our optimal parameter combinations
+## Rerunning optimal parameter combinations
 We will need rerun simulations for our optimal parameter combinations so that we can save out some outputs (e.g. simulation timeseries) that would be too burdensome to save from all simulations in our parameter search exploration. See [rerun_optimal_parameter_combinations](https://github.com/McIntosh-Lab/tvb_study_group/tree/main/Session_5-Identifying_and_evaluating_optimal_simulations/4_rerun_optimal_parameter_combinations) and the [script for batch submitting optimal simulations](https://github.com/McIntosh-Lab/tvb_study_group/blob/main/Session_5-Identifying_and_evaluating_optimal_simulations/4_rerun_optimal_parameter_combinations/submit_batch_optimal_sims.sh).
