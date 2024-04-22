@@ -23,7 +23,7 @@ FCD_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_FCD.txt"
 
 # Output directory and file for saving simulation
 sim_dir="${SUBMISSION_SCRIPT_DIR}/results/simulation"
-sim_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_sim.txt"
+sim_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_sim_"
 
 # Logging directory for saving any printouts from the jobs (e.g., errors)
 log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
