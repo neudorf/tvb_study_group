@@ -44,13 +44,13 @@ num_noise=7
 dt=0.005
 
 # simulation length (unit depends on model setup) - desired length of simulated time series - not to be confused with time_per_sim
-sim_len='6e3'
+sim_len='30e3'
 
 # Number of simulations per job
-num_sims_per_job=15
+num_sims_per_job=3
 
 # Time per simulation (seconds) - max amount of time you want your simulation script to run for - not to be confused with sim_len
-time_per_sim=200
+time_per_sim=1000
 
 ### ====================================
 ### STOP MODIFYING HERE
