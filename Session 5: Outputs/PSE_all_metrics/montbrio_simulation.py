@@ -11,7 +11,18 @@ import time
 import fcntl
 from scipy.stats import ks_2samp
 
+def get_empFUNC(subject):
+        subject_dir = os.path.join("/home/jwangbay/scratch/final_sim/emp/empFUNC/")
+        empFCD = np.load(os.path.join(subject_dir, subject + "_empFCD.npy"))
+        empFC = np.load(os.path.join(subject_dir, subject + "_empFC.npy"))
+        empFCDvar = np.load(os.path.join(subject_dir, subject + "_empFCDvar.npy"))
+        return empFCD, empFC, empFCDvar
 
+def compute_simFC(bold_d):
+    rsFC = np.corrcoef(bold_d[:,0,:,0].T)
+    rsFC = rsFC - np.diag(np.diagonal(rsFC))
+    return rsFC
+    
 def get_connectivity(scaling_factor,weights_file):
         SC = np.loadtxt(weights_file)
         SC = SC / scaling_factor
@@ -57,15 +68,34 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     (tavg_t, tavg_d), = runner.run_sim(sim, simulation_length=sim_len)
     tavg_t *= 10
         
-    bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000,TE=0.02763)
+    bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000)
     print('tavg_to_bold step')
 
     # cut the initial transient (16s)
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
-    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=20)
-    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=20))
+    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5)
+    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=5))
+    print('simFCDvar step')
+    
+    #CHECK EMPIRICAL vs SIMULATED DATA
+    empFCD, empFC, empFCDvar= get_empFUNC(subject)
+    print('get empFUNC')
+    #FCD KS VALUE
+    FCD_KS, _ = ks_2samp(np.triu(empFCD).flatten(), np.triu(FCD).flatten())
+    print('fcd_ks step:', FCD_KS)
+    #FC correlation
+    
+    simFC = compute_simFC(bold_d)
+    print('compute_simFC step')
+    FC_corr = np.corrcoef(np.triu(empFC).flatten(), np.triu(simFC).flatten())[0, 1]
+    print('fc corr step:',FC_corr)
 
+    #CHECK FCDVAR DIFF VALUE
+    FCDvar_diff= abs(empFCDvar - FCD_VAR_OV_vect)
+    print('fcdvar_diff step:',FCDvar_diff)
+
+    
     # Calculate time taken
     end_time = time.time()
     time_taken = end_time - start_time
@@ -74,4 +104,5 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
     np.save(FCD_file, FCD)
 
-    return([FCD_VAR_OV_vect, time_taken])
+    return([FCD_VAR_OV_vect, FCD_KS, FC_corr, FCDvar_diff, time_taken])
+
