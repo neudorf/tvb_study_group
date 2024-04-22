@@ -87,32 +87,28 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
 
+    # Save BOLD
     np.savetxt(sim_file + 'bold_t.txt', bold_t)
     np.save(sim_file + 'bold_d.npy', bold_d)
-    
-    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=20)
-    np.save(sim_file + 'FCD.npy', FCD)
-    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=20))
-    print('simFCDvar step')
-    
-    #CHECK EMPIRICAL vs SIMULATED DATA
-    empFCD, empFC, empFCDvar= get_empFUNC(subject,empFUNC_dir)
-    print('get empFUNC')
-    #FCD KS VALUE
-    FCD_KS, _ = ks_2samp(np.triu(empFCD).flatten(), np.triu(FCD).flatten())
-    print('fcd_ks step:', FCD_KS)
-    #FC correlation
-    
-    simFC = compute_simFC(bold_d)
-    np.save(sim_file + 'FC.npy', simFC)
-    
-    print('compute_simFC step')
-    FC_corr = np.corrcoef(np.triu(empFC).flatten(), np.triu(simFC).flatten())[0, 1]
-    print('fc corr step:',FC_corr)
 
-    #CHECK FCDVAR DIFF VALUE
+    # Calculate sim FC, FCD, FCD var
+    simFC = compute_simFC(bold_d)
+    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=20)
+    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=20))
+
+    # Save sim FC, FCD to files
+    np.save(sim_file + 'FC.npy', simFC)
+    np.save(sim_file + 'FCD.npy', FCD)
+
+    
+    # Get empirical FC, FCD, FCDvar 
+    empFCD, empFC, empFCDvar= get_empFUNC(subject,empFUNC_dir)
+
+    
+    # Calculate metrics comparing sim and emp func features
+    FCD_KS, _ = ks_2samp(np.triu(empFCD).flatten(), np.triu(FCD).flatten())
+    FC_corr = np.corrcoef(np.triu(empFC).flatten(), np.triu(simFC).flatten())[0, 1]
     FCDvar_diff= abs(empFCDvar - FCD_VAR_OV_vect)
-    print('fcdvar_diff step:',FCDvar_diff)
 
     
     # Calculate time taken
