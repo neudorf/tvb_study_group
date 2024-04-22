@@ -7,14 +7,14 @@ import traceback
 from multiprocessing import Process, Queue
 import queue  # for handling queue.Empty exception
 
-def func(q, subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern):
-    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern)
+def func(q, subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern, empFUNC_dir):
+    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern, empFUNC_dir)
     q.put(output)
 
-def process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern):
+def process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern, empFUNC_dir):
     try:
         q = Queue()
-        p = Process(target=func, args=(q, subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern))
+        p = Process(target=func, args=(q, subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern, empFUNC_dir))
         p.start()
         p.join(time_per_sim)
 
@@ -68,5 +68,6 @@ if __name__ == "__main__":
     weights_file_pattern = sys.argv[9]
     results_file_pattern = sys.argv[10]
     FCD_file_pattern = sys.argv[11]
+    empFUNC_dir = sys.argv[12]
 
-    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern)
+    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern, empFUNC_dir)
