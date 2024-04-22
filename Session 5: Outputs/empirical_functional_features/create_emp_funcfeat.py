@@ -38,7 +38,7 @@ if __name__ == "__main__":
     ts_file_path=ts_file_pattern.format(sub=sub)
     ts = read_time_series(ts_file_path)
     if ts is not None:
-        ts = ts.iloc[:144, :]  # Keep only the first 144 rows (timepoints)
+        ts = ts.iloc[:148, :]  # Keep only the first 148 rows (timepoints)
         ts = ts.to_numpy()
         rsFC = compute_fc_matrix(ts)
         
