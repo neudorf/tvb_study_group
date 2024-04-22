@@ -3,7 +3,7 @@
 #SBATCH --mail-user=YOUR_EMAIL_HERE(e.g. hello@gmail.com)
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=8000MB
-#SBATCH --time=0-1:00
+#SBATCH --time=0-5:59
 
 # This script submits one or more simulations in a single job for PSE
 
@@ -11,7 +11,7 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/path/to/Session_4-Jobs_and_PSE'
+SUBMISSION_SCRIPT_DIR='/path/to/Session_5-Jobs_and_PSE'
 
 # Load in env
 module load scipy-stack
