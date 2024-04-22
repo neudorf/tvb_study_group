@@ -19,55 +19,60 @@ img_file_pattern="/path/to/save/{subject}_PSE_heatmap_{metric}.png" #where we wa
 with open(sublist, "r") as file:
     sublist = [line.strip() for line in file]
 
+# Metrics to plot
+metrics = ['FCD_var', 'FCD_KS', 'FC_corr', 'FCDvar_diff']
+column_indices = [8, 9, 10, 11]
+
+
 # Process each subject
 for subject in sublist:
     print(f"Processing subject: {subject}")
 
     # Read data from the CSV file
     data_path = results_file_pattern.format(subject=subject)
-    data = pd.read_csv(data_path, sep="\s+", header=None, usecols=[1, 2, 8], names=["noise", "G", "FCD_var"])
+    data = pd.read_csv(data_path, sep="\s+", header=None, usecols=[1, 2] + column_indices, names=["noise", "G"] + metrics)
 
-    # Initialize dictionaries to store maximum FCD_var and NaN values for each (noise, G) pair
-    fcd_values = {}
-    nan_values = {}
+    # Process each metric
+    for metric, column_index in zip(metrics, column_indices):
+        print(f"Processing metric: {metric}")
 
-    # Update fcd_values and nan_values dictionaries
-    for _, row in data.iterrows():
-        key = (row["noise"], row["G"])
+        # Initialize dictionaries to store maximum value and NaN values for each (noise, G) pair
+        values = {}
+        nan_values = {}
 
-        # If the value is 'nan', update nan_values
-        if str(row["FCD_var"]).strip()=='nan':
-            if key not in fcd_values:
-                nan_values[key] = 1 #Mark it as 1
-                fcd_values[key] = 0
-        else:
-            # Otherwise, update fcd_values if current FCD_var is greater
-            if (key not in fcd_values) or (fcd_values[key] < row["FCD_var"]):
-                fcd_values[key] = row["FCD_var"]
-                if key in nan_values:
-                    del nan_values[key]
-    print(f"NaN values: {nan_values}")
+        # Update dictionaries
+        for _, row in data.iterrows():
+            key = (row["noise"], row["G"])
+            value = row[metric]
 
-    # Convert dictionaries to dataframes for plotting
-    df = pd.DataFrame(fcd_values.values(), index=pd.MultiIndex.from_tuples(fcd_values.keys(), names=["noise", "G"])).reset_index()
-    pivot_table = df.pivot("noise", "G", 0)
+            # If the value is 'nan', update nan_values
+            if pd.isna(value):
+                nan_values[key] = 1  # Mark it as 1
+                values[key] = 0
+            else:
+                # Otherwise, update values if current value is greater
+                if (key not in values) or (values[key] < value):
+                    values[key] = value
+                    if key in nan_values:
+                        del nan_values[key]
 
-    df_nan = pd.DataFrame(nan_values.values(), index=pd.MultiIndex.from_tuples(nan_values.keys(), names=["noise", "G"])).reset_index()
-    pivot_table_nan = df_nan.pivot("noise", "G", 0) if not df_nan.empty and "noise" in df_nan.columns and "G" in df_nan.columns else None
+        print(f"NaN values for {metric}: {nan_values}")
 
-    # Plot heatmap
-    fig, ax = plt.subplots(figsize=(10, 8))
-    cmap = plt.cm.YlGnBu(np.linspace(0, 1, 256))
-    cmap[0] = (1, 0, 0, 1)
-    cmap = plt.cm.colors.LinearSegmentedColormap.from_list("custom", cmap, 256)
+        # Convert dictionaries to dataframes for plotting
+        df = pd.DataFrame(values.values(), index=pd.MultiIndex.from_tuples(values.keys(), names=["noise", "G"])).reset_index()
+        pivot_table = df.pivot("noise", "G", 0)
 
-    sns.heatmap(pivot_table, ax=ax, cmap=cmap, cbar_kws={'label': 'FCD_var'}, mask=pivot_table.isnull(), annot=False)
-    print(pivot_table_nan)
+        # Plot heatmap
+        fig, ax = plt.subplots(figsize=(10, 8))
+        cmap = plt.cm.YlGnBu(np.linspace(0, 1, 256))
+        cmap[0] = (1, 0, 0, 1)  # Red for NaN
+        cmap = plt.cm.colors.LinearSegmentedColormap.from_list("custom", cmap, 256)
 
-    plt.title("Heatmap for FCD_var based on Noise and G")
-    plt.tight_layout()
-    plt.savefig(img_file_pattern.format(subject=subject,metric=metric))
-    plt.show()
-    plt.clf()
+        sns.heatmap(pivot_table, ax=ax, cmap=cmap, cbar_kws={'label': metric}, mask=pivot_table.isnull(), annot=False)
+        plt.title(f"Heatmap for {metric} based on Noise and G")
+        plt.tight_layout()
+        plt.savefig(img_file_pattern.format(subject=subject, metric=metric))
+        plt.show()
+        plt.clf()
 
 print("Done!")
