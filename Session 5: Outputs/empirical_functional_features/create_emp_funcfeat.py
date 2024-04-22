@@ -9,6 +9,7 @@ import showcase1_ageing as utils
 
 save_dir="/path/to/empFUNC/saves"
 ts_file_pattern = '/path/to/{sub}/rfMRI_0.ica_time_series.txt'
+# NUM OF TIMEPOINTS and WINDOW SIZES will need to be manually edited below
 
 ## =============================
 ### TO EDIT HERE
