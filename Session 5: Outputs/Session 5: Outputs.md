@@ -4,6 +4,8 @@ In past sessions, we've performed parameter search explorations with our sample 
 
 <img src="https://github.com/McIntosh-Lab/tvb_study_group/assets/32205576/4767726c-ee39-4486-ae69-707a7b0d1ef0" width="250" height="auto">
 
+<br>
+
 This session, we'll look at other metrics we may want to optimize for in our search for our optimal parameter combinations. Our additional optimization approaches are: minimizing emp-simFCD_KS (Kolmogorov–Smirnov distance between the empirical and simulated FCD matrices), maximizing emp-simFCD_corr (correlation between the empirical and simulated FCD matrices), and minimizing emp-simFCDvar_diff (difference between the empirical and simulated FCD variance).
 
 ## Generating empirical functional features
