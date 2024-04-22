@@ -11,12 +11,18 @@ import time
 import fcntl
 from scipy.stats import ks_2samp
 
-def get_empFUNC(subject):
-        subject_dir = os.path.join("/home/jwangbay/scratch/final_sim/emp/empFUNC/")
-        empFCD = np.load(os.path.join(subject_dir, subject + "_empFCD.npy"))
-        empFC = np.load(os.path.join(subject_dir, subject + "_empFC.npy"))
-        empFCDvar = np.load(os.path.join(subject_dir, subject + "_empFCDvar.npy"))
+
+## TO EDIT - exact filenames of empirical functional files may vary depending on how they were generated. The below filenames follow filenaming pattern defined in empirical_functional_features/create_emp_funcfeat.py
+## ==============================
+def get_empFUNC(subject,empFUNC_dir):
+        empFCD = np.load(os.path.join(empFUNC_dir, subject + "_empFCD.npy"))
+        empFC = np.load(os.path.join(empFUNC_dir, subject + "_empFC.npy"))
+        empFCDvar = np.load(os.path.join(empFUNC_dir, subject + "_empFCDvar.npy"))
         return empFCD, empFC, empFCDvar
+
+## ==============================
+## TO EDIT
+
 
 def compute_simFC(bold_d):
     rsFC = np.corrcoef(bold_d[:,0,:,0].T)
@@ -36,7 +42,7 @@ def get_connectivity(scaling_factor,weights_file):
         return conn
 
 
-def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern):
+def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern,empFUNC_dir):
     start_time = time.time()
 
     weights_file=weights_file_pattern.format(subject=subject)
@@ -79,7 +85,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     print('simFCDvar step')
     
     #CHECK EMPIRICAL vs SIMULATED DATA
-    empFCD, empFC, empFCDvar= get_empFUNC(subject)
+    empFCD, empFC, empFCDvar= get_empFUNC(subject,empFUNC_dir)
     print('get empFUNC')
     #FCD KS VALUE
     FCD_KS, _ = ks_2samp(np.triu(empFCD).flatten(), np.triu(FCD).flatten())
