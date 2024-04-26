@@ -63,7 +63,7 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     # cut the initial transient (16s)
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
-    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5)
+    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5) # win_len should be equal to k in next line, and will depend on decimate value from above TR (decimate)
     FCD_VAR_OV_vect= np.var(np.triu(FCD, k=5))
 
     # Calculate time taken

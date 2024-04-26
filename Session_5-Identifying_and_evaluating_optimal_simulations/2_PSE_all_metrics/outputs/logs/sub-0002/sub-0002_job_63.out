@@ -1,0 +1,44 @@
+
+The following have been reloaded with a version change:
+  1) python/3.7.7 => python/3.8.10
+
+
+The following have been reloaded with a version change:
+  1) python/3.8.10 => python/3.7.7
+
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+simFCDvar step
+get empFUNC
+fcd_ks step: 0.2432141897339425
+compute_simFC step
+fc corr step: 0.6190642658502671
+fcdvar_diff step: 0.02098241427085123
+/home/jneudorf/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.87 dt=0.005, Result=[0.008815113034370194, 0.2432141897339425, 0.6190642658502671, 0.02098241427085123, 409.59864234924316]
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+simFCDvar step
+get empFUNC
+fcd_ks step: 0.2527546358505778
+compute_simFC step
+fc corr step: 0.624705701649351
+fcdvar_diff step: 0.022504349660473433
+/home/jneudorf/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.88 dt=0.005, Result=[0.007293177644747991, 0.2527546358505778, 0.624705701649351, 0.022504349660473433, 401.91786646842957]
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+simFCDvar step
+get empFUNC
+fcd_ks step: 0.15365493147003495
+compute_simFC step
+fc corr step: 0.6067966597132112
+fcdvar_diff step: 0.01435899267519278
+/home/jneudorf/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.89 dt=0.005, Result=[0.015438534630028646, 0.15365493147003495, 0.6067966597132112, 0.01435899267519278, 394.7098824977875]

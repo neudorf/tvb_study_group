@@ -6,31 +6,35 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/path/to/Session_5-Jobs_and_PSE'
+SUBMISSION_SCRIPT_DIR='.'
+DATA_DIR='../../Session_4-Jobs_and_PSE'
 
 # List of subjects
-sublist="${SUBMISSION_SCRIPT_DIR}/subs.tsv"
+sublist="${DATA_DIR}/subs.tsv"
 
 # Path to a subject's weights matrix txt file - the {subject} portion will be replaced dynamically in the python script
-weights_file_pattern="${SUBMISSION_SCRIPT_DIR}/subs/{subject}/weights.txt"
+weights_file_pattern="${DATA_DIR}/subs/{subject}/weights.txt"
 
+# location of new outputs
+OUTPUTS_DIR='outputs'
+mkdir $OUTPUTS_DIR
 # Output file for job parameters
-param_file="${SUBMISSION_SCRIPT_DIR}/PSE_job_parameters.txt"
+param_file="${OUTPUTS_DIR}/PSE_job_parameters.txt"
 > "$param_file"  # Clear existing file contents
 
 # Output directory and file for saving simulation results
-results_dir="${SUBMISSION_SCRIPT_DIR}/results/simulation_results"
+results_dir="${OUTPUTS_DIR}/results/simulation_results"
 results_file_pattern="${results_dir}/{subject}_simulation_results.txt"
 
 # Output directory and file for saving FCD matrices
-FCD_dir="${SUBMISSION_SCRIPT_DIR}/results/FCD_matrices"
+FCD_dir="${OUTPUTS_DIR}/results/FCD_matrices"
 FCD_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_FCD.txt"
 
 # Logging directory for saving any printouts from the jobs (e.g. errors)
-log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
+log_dir="${OUTPUTS_DIR}/logs"
 
 # Location of empirical functional feature files (FC, FCD, FCDvar) 
-empFUNC_dir="/path/to/empFUNC/saves"
+empFUNC_dir="../1_empirical_functional_features/empFUNC/saves"
 
 # Parameter ranges
 G_start=1.65

@@ -46,7 +46,6 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     start_time = time.time()
 
     weights_file=weights_file_pattern.format(subject=subject)
-    
 
     dt      = dt
     nsigma  = my_noise

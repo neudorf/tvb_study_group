@@ -1,0 +1,37 @@
+
+The following have been reloaded with a version change:
+  1) ipykernel/2020b => ipykernel/2023b
+  2) python/3.7.7 => python/3.10.2
+  3) scipy-stack/2020b => scipy-stack/2023b
+
+Processing subject: sub-0001
+NaN values: {(0.0388888888, 2.02): 1, (0.0499999998, 2.0425): 1, (0.0499999998, 2.04625): 1, (0.0499999998, 2.05): 1, (0.0477777776, 2.05): 1, (0.0388888888, 2.05): 1, (0.0499999998, 1.97125): 1, (0.0499999998, 2.03125): 1, (0.0499999998, 1.975): 1}
+G         1.97125  1.97500  2.02000  2.03125  2.04250  2.04625  2.05000
+noise                                                                  
+0.038889      NaN      NaN      1.0      NaN      NaN      NaN      1.0
+0.047778      NaN      NaN      NaN      NaN      NaN      NaN      1.0
+0.050000      1.0      1.0      NaN      1.0      1.0      1.0      1.0
+Processing subject: sub-0002
+NaN values: {(0.0477777776, 2.02): 1, (0.041111111, 2.03125): 1, (0.0499999998, 1.92625): 1, (0.0322222222, 2.03875): 1, (0.0433333332, 1.945): 1, (0.0499999998, 1.99): 1, (0.0499999998, 2.05): 1, (0.0499999998, 1.9375): 1, (0.0477777776, 1.9825): 1, (0.0455555554, 1.915): 1, (0.0344444444, 2.01625): 1, (0.0455555554, 1.97875): 1, (0.0455555554, 2.03875): 1, (0.0433333332, 2.02375): 1, (0.0366666666, 2.03875): 1, (0.0477777776, 1.94875): 1, (0.0433333332, 1.9525): 1, (0.0433333332, 2.03125): 1, (0.0499999998, 2.0125): 1, (0.0455555554, 2.05): 1, (0.0455555554, 1.9975): 1, (0.0499999998, 2.03125): 1}
+G         1.91500  1.92625  1.93750  ...  2.03125  2.03875  2.05000
+noise                                ...                           
+0.032222      NaN      NaN      NaN  ...      NaN      1.0      NaN
+0.034444      NaN      NaN      NaN  ...      NaN      NaN      NaN
+0.036667      NaN      NaN      NaN  ...      NaN      1.0      NaN
+0.041111      NaN      NaN      NaN  ...      1.0      NaN      NaN
+0.043333      NaN      NaN      NaN  ...      1.0      NaN      NaN
+0.045556      1.0      NaN      NaN  ...      NaN      1.0      1.0
+0.047778      NaN      NaN      NaN  ...      NaN      NaN      NaN
+0.050000      NaN      1.0      1.0  ...      1.0      NaN      1.0
+
+[8 rows x 17 columns]
+Traceback (most recent call last):
+  File "heatmap.py", line 97, in <module>
+    sns.heatmap(rank_mean_pivot, ax=ax, cmap=cmap, cbar_kws={'label': 'FCD_var_rank'}, mask=pivot_table.isnull(), annot=False)
+  File "/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/seaborn/matrix.py", line 448, in heatmap
+    yticklabels, mask)
+  File "/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/seaborn/matrix.py", line 115, in __init__
+    plot_data = np.ma.masked_where(np.asarray(mask), plot_data)
+  File "/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/numpy/ma/core.py", line 1930, in masked_where
+    " (got %s and %s)" % (cshape, ashape))
+IndexError: Inconsistent shape between the condition and the input (got (420, 42) and (410,))

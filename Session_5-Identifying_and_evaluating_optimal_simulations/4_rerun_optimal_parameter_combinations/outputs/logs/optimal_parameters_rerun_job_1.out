@@ -1,0 +1,68 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mii/1.1.2
+
+The following have been reloaded with a version change:
+  1) StdEnv/2023 => StdEnv/2020           5) libfabric/1.18.0 => libfabric/1.10.1
+  2) gcccore/.12.3 => gcccore/.9.3.0      6) openmpi/4.1.5 => openmpi/4.0.3
+  3) gentoo/2023 => gentoo/2020           7) ucx/1.14.1 => ucx/1.8.0
+  4) imkl/2023.2.0 => imkl/2020.1.217
+
+
+The following have been reloaded with a version change:
+  1) python/3.8.10 => python/3.7.7
+
+weights optimal_sim_job.sh
+../../Session_4-Jobs_and_PSE/subs/{subject}/weights.txt
+Subject
+Noise
+G
+metric_value
+metric_value
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+single_sim.py subject Subject
+Traceback (most recent call last):
+  File "./single_sim_handler.py", line 62, in <module>
+    noise = float(sys.argv[2])
+ValueError: could not convert string to float: 'Noise'
+sub-0001
+0.04
+2.01
+metric_value
+0.0532945198670349
+single_sim.py subject sub-0001
+single_sim.py noise 0.04
+single_sim.py G 2.01
+single_sim.py dt 0.005
+single_sim.py sim_len 30000.0
+single_sim.py time_per_sim 1000
+single_sim.py job_ID 29876988
+single_sim.py job_array_num 1
+single_sim.py weights ../../Session_4-Jobs_and_PSE/subs/{subject}/weights.txt
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+/home/jneudorf/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0001 noise=0.04 G=2.01 dt=0.005, Result=[0.05329451986703491, 0.12879602257457667, 0.7286243080608398, 0.011729018977811853, 421.6829469203949]
+sub-0002
+0.04
+1.99
+metric_value
+0.0618784109951773
+single_sim.py subject sub-0002
+single_sim.py noise 0.04
+single_sim.py G 1.99
+single_sim.py dt 0.005
+single_sim.py sim_len 30000.0
+single_sim.py time_per_sim 1000
+single_sim.py job_ID 29876988
+single_sim.py job_array_num 1
+single_sim.py weights ../../Session_4-Jobs_and_PSE/subs/{subject}/weights.txt
+/home/jneudorf/TVB/virtual_aging_brain/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+/home/jneudorf/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.99 dt=0.005, Result=[0.0618784109951773, 0.21123353937113687, 0.7363736096565715, 0.032080883689955875, 417.0385000705719]

@@ -2,14 +2,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from os import makedirs
 
 ### START MODIFYING HERE
 ### ====================================
 
 # Define file names and directories
-sublist = "/path/to/subs.tsv" #where are sublist is
-results_file_pattern="path/to/{subject}_simulation_results.txt" #where our PSE results files are
-img_file_pattern="/path/to/save/{subject}_PSE_heatmap_{metric}.png" #where we want heatmaps saved to
+sublist = "../../Session_4-Jobs_and_PSE/subs.tsv"  # where our sublist is
+results_file_pattern = "../2_PSE_all_metrics/outputs/results/simulation_results/{subject}_simulation_results.txt"  # where our PSE results files are
+img_file_pattern="heatmaps/{subject}_PSE_heatmap_{metric}.png" #where we want heatmaps saved to
+makedirs("heatmaps",exist_ok=True)
 
 ### STOP MODIFYING HERE
 ### ====================================

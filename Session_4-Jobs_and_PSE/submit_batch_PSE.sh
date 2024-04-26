@@ -6,7 +6,7 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/path/to/Session_4-Jobs_and_PSE'
+SUBMISSION_SCRIPT_DIR='/home/jneudorf/scratch/TVB_jobs/tvb_study_group/Session_4-Jobs_and_PSE'
 
 # List of subjects
 sublist="${SUBMISSION_SCRIPT_DIR}/subs.tsv"
@@ -30,24 +30,28 @@ FCD_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_FCD.txt"
 log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
 
 # Parameter ranges
-G_start=1.65
+# G_start=1.65
+# G_end=2.05
+G_start=1.9
 G_end=2.05
 num_G=41
 
-noise_start=0.02
+# noise_start=0.02
+# noise_end=0.05
+noise_start=0.03
 noise_end=0.05
-num_noise=7
+num_noise=10
 
 dt=0.005
 
 # simulation length (unit depends on model setup) - desired length of simulated time series - not to be confused with time_per_sim
-sim_len='6e3'
+sim_len='3e4' # 5 min. was 6e3 for 1 min. not sure how the units work here as I would expect 60,000 for ms
 
 # Number of simulations per job
 num_sims_per_job=15
 
 # Time per simulation (seconds) - max amount of time you want your simulation script to run for - not to be confused with sim_len
-time_per_sim=200
+time_per_sim=1000
 
 ### ====================================
 ### STOP MODIFYING HERE

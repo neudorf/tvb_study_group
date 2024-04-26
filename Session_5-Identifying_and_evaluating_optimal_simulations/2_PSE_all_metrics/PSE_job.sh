@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --account=YOUR_ALLOCATION_HERE(e.g. def-rmcintos)
-#SBATCH --mail-user=YOUR_EMAIL_HERE(e.g. hello@gmail.com)
+#SBATCH --account=def-rmcintos
+#SBATCH --mail-user=jneudorf@sfu.ca
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=8000MB
 #SBATCH --time=0-5:59
@@ -11,11 +11,13 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/path/to/Session_5-Jobs_and_PSE'
+SUBMISSION_SCRIPT_DIR='.'
 
 # Load in env
-module load scipy-stack
-. ~/path/to/virtual_aging_brain/env/bin/activate
+module load StdEnv/2020
+module load scipy-stack/2020b
+module load python/3.7.7
+. ~/TVB/virtual_aging_brain/env/bin/activate
 
 ### STOP MODIFYING HERE
 ### ====================================

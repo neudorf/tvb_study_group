@@ -7,8 +7,8 @@ import showcase1_ageing as utils
 ### TO EDIT HERE
 ## =============================
 
-save_dir="/path/to/empFUNC/saves"
-ts_file_pattern = '/path/to/{sub}/rfMRI_0.ica_time_series.txt'
+save_dir="empFUNC/saves"
+ts_file_pattern = '../../Session_4-Jobs_and_PSE/subs/{sub}/rfMRI.ica_time_series.txt'
 # NUM OF TIMEPOINTS we want to look at and WINDOW SIZES will need to be manually edited below - THEY MUST MATCH OUR SIMULATED DATA's NUM OF TIMEPOINTS and WINDOW SIZES
 
 ## =============================
